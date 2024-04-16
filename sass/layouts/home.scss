@@ -12,15 +12,27 @@
     align-items: center;
     text-align: center;
     background-color: #F6F6F6;
+    @media screen and (min-width: 1024px){
+        align-items: center;
+        gap: 18px;
+    } 
+   
     
     &__title {
-        width: 275px;    
+        width: 275px;  
+        @media screen and (min-width: 1024px){
+            width: 100%;
+        }  
     }
 
     &__text {
         width: 315px;
         font-size: $fs-18;
         margin-bottom: 27px;
+        @media screen and (min-width: 1024px){
+            width: 100%;
+            margin: 0;
+        }
     }
 }
 
@@ -28,6 +40,13 @@
 
 .tuto {
     padding: 48px 20px 68px 20px;
+    @media screen and (min-width: 1024px){
+        width: 1053px;
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+    }
     
 
     &__title {
@@ -40,7 +59,11 @@
         align-items: start;
         gap: 24.92px;
         padding-left: 12.51px;
+        @media screen and (min-width: 1024px){
+            flex-direction: row;
+        }
     }
+    
 
     &__content li {
         width: 100%;
@@ -49,6 +72,9 @@
         padding: 20px 0 20px 0;
         box-shadow: 0 4px 15px 0 rgba( 0,0,0,0.15);
         background-color: #F6F6F6;
+        @media screen and (min-width: 1024px){
+            
+        }
     }
      
     &__circle {
@@ -85,6 +111,13 @@
 .restaurants {
     background-color: #F6F6F6;
     padding: 54px 18px 66px 17px;
+    @media screen and (min-width: 1024px){
+        width: 1053px;
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
     &__heading {
         padding-bottom: 48px;
@@ -94,6 +127,10 @@
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 2rem;
+        @media screen and (min-width: 1024px){
+           grid-template-columns: repeat(2, 1fr);
+           column-gap: 100px;
+        }
     }
 
     &__card {
@@ -124,7 +161,6 @@
         align-content: center;
     }
 
-
     &__footer {
         padding: 16px;
         display: flex;
@@ -139,9 +175,9 @@
         margin-bottom: 4px;
       }
 
+      &__like {
+        font-size: 21px;
+      }
+
 }
 
-.fa-heart {
-    width: 22px;
-    height: 21px;
-}

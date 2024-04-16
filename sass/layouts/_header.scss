@@ -7,6 +7,9 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     margin-bottom: 1px;
+    @media screen and (min-width: 1024px){
+        box-shadow: none;
+    }
     
         &__logo {
             text-align: center;
@@ -22,6 +25,9 @@
     @include flex-center;
     gap: 17px;
     box-shadow: 0 4px 4px 0 rgba( 0,0,0,0.25);
+    @media screen and (min-width: 1024px){
+        box-shadow: none;
+    }
 
     &__input {
         width: 115px;

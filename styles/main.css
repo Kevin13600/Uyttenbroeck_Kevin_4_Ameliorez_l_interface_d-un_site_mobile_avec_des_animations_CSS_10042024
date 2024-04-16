@@ -56,6 +56,11 @@ button {
   background-color: #ffffff;
   margin-bottom: 1px;
 }
+@media screen and (min-width: 1024px) {
+  .header {
+    box-shadow: none;
+  }
+}
 .header__logo {
   text-align: center;
   font-weight: 400;
@@ -71,6 +76,11 @@ button {
   align-items: center;
   gap: 17px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 1024px) {
+  .local {
+    box-shadow: none;
+  }
 }
 .local__input {
   width: 115px;
@@ -123,17 +133,43 @@ button {
   text-align: center;
   background-color: #F6F6F6;
 }
+@media screen and (min-width: 1024px) {
+  .hero {
+    align-items: center;
+    gap: 18px;
+  }
+}
 .hero__title {
   width: 275px;
+}
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    width: 100%;
+  }
 }
 .hero__text {
   width: 315px;
   font-size: 1.125rem;
   margin-bottom: 27px;
 }
+@media screen and (min-width: 1024px) {
+  .hero__text {
+    width: 100%;
+    margin: 0;
+  }
+}
 
 .tuto {
   padding: 48px 20px 68px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .tuto {
+    width: 1053px;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .tuto__title {
   padding-bottom: 26px;
@@ -144,6 +180,11 @@ button {
   align-items: start;
   gap: 24.92px;
   padding-left: 12.51px;
+}
+@media screen and (min-width: 1024px) {
+  .tuto__content {
+    flex-direction: row;
+  }
 }
 .tuto__content li {
   width: 100%;
@@ -182,6 +223,15 @@ button {
   background-color: #F6F6F6;
   padding: 54px 18px 66px 17px;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    width: 1053px;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 .restaurants__heading {
   padding-bottom: 48px;
 }
@@ -189,6 +239,12 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__cards {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+  }
 }
 .restaurants__card {
   background-color: #ffffff;
@@ -225,10 +281,8 @@ button {
 .restaurants__title {
   margin-bottom: 4px;
 }
-
-.fa-heart {
-  width: 22px;
-  height: 21px;
+.restaurants__like {
+  font-size: 21px;
 }
 
 h1 {
@@ -270,17 +324,40 @@ button {
   padding: 22px 25px;
   color: #ffffff;
 }
+@media screen and (min-width: 1024px) {
+  .footer {
+    height: 114px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    align-items: flex-end;
+  }
+}
 .footer__logo {
+  width: 139px;
   font-size: 1.125rem;
   font-family: "Shrikhand";
   padding-bottom: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .footer__logo {
+    padding: 0;
+  }
 }
 .footer__global {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
+@media screen and (min-width: 1024px) {
+  .footer__global {
+    width: 661px;
+    flex-direction: row;
+  }
+}
 .footer__content {
+  width: 190px;
   display: flex;
   gap: 11px;
 }
