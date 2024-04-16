@@ -1,0 +1,37 @@
+@import '../themes/theme';
+
+h1 {
+    font-family: $theme-heading-Shrikhand;
+    font-size: $fs-30;
+}
+
+
+h2 {
+    font-family: $theme-text-roboto;
+    font-size: $fs-24;
+    font-weight: 700;
+}
+
+p {
+    font-family: $theme-text-roboto;
+    font-size: $fs-18;
+    font-weight: 300;
+}
+
+span {
+    font-family: $theme-text-roboto;
+}
+
+button {
+    width: 218px;
+    height: 50px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    font-size: $fs-16;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: $theme-text-roboto;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px 0 rgba( 0,0,0,0.25);
+}
+

@@ -1,0 +1,17 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+::placeholder {
+    color: #000000;
+  }
+
+  li {
+    list-style: none;
+  }

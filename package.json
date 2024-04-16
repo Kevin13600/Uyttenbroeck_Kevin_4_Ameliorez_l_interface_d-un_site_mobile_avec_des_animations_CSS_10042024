@@ -1,0 +1,13 @@
+{
+  "name": "uyttenbroeck_kevin_4_ameliorez_l_interface_d'un_site_mobile_avec_des_animations_css_10042024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss ./styles/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

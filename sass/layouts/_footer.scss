@@ -1,0 +1,30 @@
+@import "../themes/theme";
+@import "../utils/mixins";
+@import "../components/component";
+
+.footer {
+    background-color: #353535;
+    padding: 22px 25px;
+    color: #ffffff;
+
+    &__logo {
+        font-size: $fs-18;
+        font-family: $theme-heading-Shrikhand;
+        padding-bottom: 16px;
+    }
+
+    &__global {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    &__content {
+        display: flex;
+        gap: 11px;
+        & i {
+            width: 15px;
+            font-size: 14px;
+        }
+    }
+}
