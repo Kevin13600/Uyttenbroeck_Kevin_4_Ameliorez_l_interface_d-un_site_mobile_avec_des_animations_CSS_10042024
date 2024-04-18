@@ -50,11 +50,23 @@ button {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+li {
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  padding: 20px 0 20px 0;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  background-color: #F6F6F6;
+}
+
 .header {
   height: 63px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
   margin-bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 @media screen and (min-width: 1024px) {
   .header {
@@ -66,6 +78,11 @@ button {
   font-weight: 400;
   padding-top: 14px;
   padding-bottom: 13px;
+  flex: 2;
+}
+.header__arrow {
+  padding-left: 17px;
+  font-size: 20px;
 }
 
 .local {
@@ -88,6 +105,12 @@ button {
   outline: none;
   font-weight: bold;
   background-color: #EAEAEA;
+}
+
+.showcase {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
 }
 
 h1 {
@@ -122,6 +145,15 @@ button {
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+li {
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  padding: 20px 0 20px 0;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  background-color: #F6F6F6;
 }
 
 .hero {
@@ -186,14 +218,6 @@ button {
     flex-direction: row;
   }
 }
-.tuto__content li {
-  width: 100%;
-  display: flex;
-  border-radius: 20px;
-  padding: 20px 0 20px 0;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  background-color: #F6F6F6;
-}
 .tuto__circle {
   width: 24px;
   height: 24px;
@@ -225,7 +249,7 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .restaurants {
-    width: 1053px;
+    max-width: 1053px;
     display: flex;
     flex-direction: column;
     margin-right: auto;
@@ -238,7 +262,7 @@ button {
 .restaurants__cards {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 2rem;
+  row-gap: 32px;
 }
 @media screen and (min-width: 1024px) {
   .restaurants__cards {
@@ -319,6 +343,15 @@ button {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+li {
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  padding: 20px 0 20px 0;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  background-color: #F6F6F6;
+}
+
 .footer {
   background-color: #353535;
   padding: 22px 25px;
@@ -364,6 +397,144 @@ button {
 .footer__content i {
   width: 15px;
   font-size: 14px;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+span {
+  font-family: "Roboto";
+}
+
+button {
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Roboto";
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+li {
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  padding: 20px 0 20px 0;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  background-color: #F6F6F6;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+  bottom: 60px;
+  z-index: 1;
+  border: transparent 1px solid;
+  margin-bottom: -60px;
+}
+.menu__heading {
+  padding: 32px 17px 40px 17px;
+  width: 341px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.menu__title {
+  font-size: 1.75rem;
+}
+.menu__like {
+  font-size: 21px;
+}
+
+.template {
+  padding: 0 13px 0 13px;
+}
+.template__title {
+  width: 76px;
+  height: 27px;
+  font-size: 1.125rem;
+  position: relative;
+  display: inline-block;
+}
+.template__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2.5rem;
+  height: 3px;
+  background-color: #99E2D0;
+  transform: translateX(-95%);
+}
+.template__container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 40px 0;
+}
+.template__items {
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+.template__item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  padding-left: 15px;
+}
+.template__name {
+  font-size: 1.125rem;
+}
+.template__lastname {
+  font-size: 0.9375rem;
+}
+.template__price {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding-top: 27px;
+}
+.template__animation {
+  width: 59px;
+  height: 69px;
+  align-content: center;
+  text-align: center;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+}
+.template__check {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.containtBtn {
+  text-align: center;
+  padding-bottom: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */

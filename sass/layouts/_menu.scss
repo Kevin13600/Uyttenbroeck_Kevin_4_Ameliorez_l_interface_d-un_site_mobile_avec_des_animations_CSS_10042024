@@ -1,0 +1,121 @@
+@import "../themes/theme";
+@import "../utils/mixins";
+@import "../components/component";
+
+
+
+
+.menu {
+    background-color: #F6F6F6;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    bottom: 60px;
+    z-index: 1;
+    border: transparent 1px solid;
+    margin-bottom: -60px;
+
+    &__heading {
+        padding: 32px 17px 40px 17px;
+        width: 341px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__title {
+        font-size: $fs-28;
+    }
+
+    &__like {
+        font-size: 21px;   
+    }
+
+}
+
+.template {
+    padding: 0 13px 0 13px;
+
+    &__title {
+        width: 76px;
+        height: 27px;
+        font-size: $fs-18;
+        position: relative;
+        display: inline-block;
+        &::after {
+            content: ""; 
+            position: absolute;
+            bottom: 0;
+            left: 50%; 
+            width: 2.5rem; 
+            height: 3px; 
+            background-color: $cyan-Tertiary; 
+            transform: translateX(-95%); 
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 40px 0;
+    }
+
+    &__items {
+        width: 100%;
+        display: flex; 
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 rgba( 0,0,0,0.15);
+        background-color: #ffffff;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        flex: 1;
+        padding-left: 15px;
+        
+    }
+
+    &__name {
+        font-size: $fs-18;
+    }
+
+    &__lastname {
+        font-size: $fs-15;
+    }
+
+    &__price {
+        font-size: $fs-15;
+        font-weight: 700;
+        padding-top: 27px;
+    }
+
+    &__animation {
+        width: 59px;
+        height: 69px;
+        align-content: center;
+        text-align: center;
+        border-radius: 0 15px 15px 0;
+        background-color: $cyan-Tertiary;
+    }
+
+    &__check {
+        color: #ffffff;
+        font-size: 20px;
+    }
+    
+}
+
+.containtBtn {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+
+
+
+

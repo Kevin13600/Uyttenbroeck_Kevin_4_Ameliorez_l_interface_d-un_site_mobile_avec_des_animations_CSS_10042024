@@ -7,16 +7,25 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     @media screen and (min-width: 1024px){
         box-shadow: none;
     }
-    
-        &__logo {
-            text-align: center;
-            font-weight: 400;
-            padding-top: 14px;
-            padding-bottom: 13px;
+    &__logo {
+        text-align: center;
+        font-weight: 400;
+        padding-top: 14px;
+        padding-bottom: 13px;
+        flex: 2;
         }
+    
+    &__arrow {
+        padding-left: 17px;
+        font-size: 20px
+    }
+
 }
 
 .local {
@@ -35,6 +44,11 @@
         outline: none;
         font-weight: bold;
         background-color: #EAEAEA; 
-    }
+    }  
+}
 
+.showcase {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
 }

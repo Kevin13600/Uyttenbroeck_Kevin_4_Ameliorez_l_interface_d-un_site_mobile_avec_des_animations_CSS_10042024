@@ -64,19 +64,6 @@
         }
     }
     
-
-    &__content li {
-        width: 100%;
-        display: flex; 
-        border-radius: 20px;
-        padding: 20px 0 20px 0;
-        box-shadow: 0 4px 15px 0 rgba( 0,0,0,0.15);
-        background-color: #F6F6F6;
-        @media screen and (min-width: 1024px){
-            
-        }
-    }
-     
     &__circle {
         width: 24px;
         height: 24px;
@@ -112,7 +99,7 @@
     background-color: #F6F6F6;
     padding: 54px 18px 66px 17px;
     @media screen and (min-width: 1024px){
-        width: 1053px;
+        max-width: 1053px;
         display: flex;
         flex-direction: column;
         margin-right: auto;
@@ -126,7 +113,7 @@
     &__cards {
         display: grid;
         grid-template-columns: 1fr;
-        row-gap: 2rem;
+        row-gap: 32px;
         @media screen and (min-width: 1024px){
            grid-template-columns: repeat(2, 1fr);
            column-gap: 100px;
