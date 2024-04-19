@@ -13,12 +13,20 @@
     z-index: 1;
     border: transparent 1px solid;
     margin-bottom: -60px;
+    @media screen and (min-width: 1024px) {
+        padding: 0 200px;
+        max-width: 1055px;
+        margin: 0 auto;
+    }
 
     &__heading {
         padding: 32px 17px 40px 17px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        @media screen and (min-width: 1024px){
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__title {
@@ -28,7 +36,11 @@
 
     &__like {
         font-size: 21px;
-        padding-right: 41px;   
+        padding-right: 41px; 
+        @media screen and (min-width: 1024px) {
+            padding-right:0;
+            padding-left: 41px;
+        } 
     }
 
 }
@@ -67,30 +79,38 @@
         width: 100%;
         display: flex; 
         border-radius: 20px;
-        box-shadow: 0 4px 15px 0 rgba( 0,0,0,0.15);
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
         background-color: #ffffff;
-        justify-content: flex-end;
         align-items: center;
-        gap: 15px;
+        justify-content: flex-end;
+        overflow: hidden;
     }
-
+    
     &__item {
         display: flex;
         flex-direction: column;
+        padding-left: 15px;
         gap: 5px;
         flex: 1;
-        padding-left: 15px;
-        
+        overflow: hidden;
+        min-width: 0;
     }
 
     &__name {
         font-family: $theme-text-roboto;
         font-size: $fs-18;
+        white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+        overflow: hidden; /* Cache tout contenu débordant */
+        text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer le texte tronqué */
     }
 
     &__lastname {
         font-family: $theme-text-roboto;
         font-size: $fs-15;
+        white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+        overflow: hidden; /* Cache tout contenu débordant */
+        text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer le texte tronqué */
+
     }
 
     &__price {
@@ -98,15 +118,18 @@
         font-family: $theme-text-roboto;
         font-weight: 700;
         padding-top: 27px;
+        padding-right: 13.5px;
     }
 
     &__animation {
-        width: 59px;
+        width: 0;
         height: 69px;
         align-content: center;
         text-align: center;
         border-radius: 0 15px 15px 0;
         background-color: $cyan-Tertiary;
+        overflow: hidden;
+        transition: width 0.5s ease;
     }
 
     &__check {
@@ -115,6 +138,11 @@
     }
     
 }
+
+.menu__items:hover .menu__animation {
+    width: 59px;
+}
+
 
 .menu__btn {
     text-align: center;

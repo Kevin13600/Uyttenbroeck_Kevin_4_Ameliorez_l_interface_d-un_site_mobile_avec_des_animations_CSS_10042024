@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -14,6 +15,14 @@ a {
 
 li {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "Roboto";
 }
 
 button {
@@ -88,10 +97,15 @@ li {
   background-color: #EAEAEA;
 }
 
-.showcase {
+.header__image {
   width: 100%;
   height: 275px;
   object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .header__image {
+    height: 383px;
+  }
 }
 
 button {
@@ -142,6 +156,7 @@ li {
 .hero__text {
   width: 315px;
   font-size: 1.125rem;
+  font-family: "Roboto";
   margin-bottom: 27px;
 }
 @media screen and (min-width: 1024px) {
@@ -201,6 +216,7 @@ li {
 .tuto__text {
   font-size: 1rem;
   font-weight: 500;
+  font-family: "Roboto";
 }
 
 .restaurants {
@@ -212,12 +228,13 @@ li {
     max-width: 1053px;
     display: flex;
     flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
   }
 }
 .restaurants__heading {
   padding-bottom: 48px;
+  font-weight: 500;
+  font-family: "Roboto";
 }
 .restaurants__cards {
   display: grid;
@@ -264,6 +281,10 @@ li {
 }
 .restaurants__title {
   margin-bottom: 4px;
+  font-family: "Roboto";
+}
+.restaurants__subtitle {
+  font-family: "Roboto";
 }
 .restaurants__like {
   font-size: 21px;
@@ -372,11 +393,23 @@ li {
   border: transparent 1px solid;
   margin-bottom: -60px;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant {
+    padding: 0 200px;
+    max-width: 1055px;
+    margin: 0 auto;
+  }
+}
 .restaurant__heading {
   padding: 32px 17px 40px 17px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__heading {
+    justify-content: center;
+    align-items: center;
+  }
 }
 .restaurant__title {
   font-family: "Shrikhand";
@@ -385,6 +418,12 @@ li {
 .restaurant__like {
   font-size: 21px;
   padding-right: 41px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__like {
+    padding-right: 0;
+    padding-left: 41px;
+  }
 }
 
 .menu {
@@ -421,42 +460,57 @@ li {
   border-radius: 20px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
-  justify-content: flex-end;
   align-items: center;
-  gap: 15px;
+  justify-content: flex-end;
+  overflow: hidden;
 }
 .menu__item {
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
   gap: 5px;
   flex: 1;
-  padding-left: 15px;
+  overflow: hidden;
+  min-width: 0;
 }
 .menu__name {
   font-family: "Roboto";
   font-size: 1.125rem;
+  white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+  overflow: hidden; /* Cache tout contenu débordant */
+  text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer le texte tronqué */
 }
 .menu__lastname {
   font-family: "Roboto";
   font-size: 0.9375rem;
+  white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+  overflow: hidden; /* Cache tout contenu débordant */
+  text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer le texte tronqué */
 }
 .menu__price {
   font-size: 0.9375rem;
   font-family: "Roboto";
   font-weight: 700;
   padding-top: 27px;
+  padding-right: 13.5px;
 }
 .menu__animation {
-  width: 59px;
+  width: 0;
   height: 69px;
   align-content: center;
   text-align: center;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
+  overflow: hidden;
+  transition: width 0.5s ease;
 }
 .menu__check {
   color: #ffffff;
   font-size: 20px;
+}
+
+.menu__items:hover .menu__animation {
+  width: 59px;
 }
 
 .menu__btn {

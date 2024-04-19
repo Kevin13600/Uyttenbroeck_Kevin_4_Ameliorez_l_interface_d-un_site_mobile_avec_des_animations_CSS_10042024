@@ -28,6 +28,7 @@
     &__text {
         width: 315px;
         font-size: $fs-18;
+        font-family: $theme-text-roboto;
         margin-bottom: 27px;
         @media screen and (min-width: 1024px){
             width: 100%;
@@ -90,6 +91,7 @@
     &__text {
         font-size: $fs-16;
         font-weight: 500;
+        font-family: $theme-text-roboto;
     }
 }
 
@@ -102,12 +104,13 @@
         max-width: 1053px;
         display: flex;
         flex-direction: column;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto;
     }
 
     &__heading {
         padding-bottom: 48px;
+        font-weight: 500;
+        font-family: $theme-text-roboto;
     }
 
     &__cards {
@@ -160,6 +163,11 @@
 
       &__title {
         margin-bottom: 4px;
+        font-family: $theme-text-roboto;
+      }
+
+      &__subtitle {
+        font-family: $theme-text-roboto;
       }
 
       &__like {
