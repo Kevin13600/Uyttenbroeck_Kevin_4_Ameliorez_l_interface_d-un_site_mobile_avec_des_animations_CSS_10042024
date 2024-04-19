@@ -16,27 +16,6 @@ li {
   list-style: none;
 }
 
-h1 {
-  font-family: "Shrikhand";
-  font-size: 1.875rem;
-}
-
-h2 {
-  font-family: "Roboto";
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-p {
-  font-family: "Roboto";
-  font-size: 1.125rem;
-  font-weight: 300;
-}
-
-span {
-  font-family: "Roboto";
-}
-
 button {
   width: 218px;
   height: 50px;
@@ -74,6 +53,8 @@ li {
   }
 }
 .header__logo {
+  font-size: 1.875rem;
+  font-family: "Shrikhand";
   text-align: center;
   font-weight: 400;
   padding-top: 14px;
@@ -111,27 +92,6 @@ li {
   width: 100%;
   height: 275px;
   object-fit: cover;
-}
-
-h1 {
-  font-family: "Shrikhand";
-  font-size: 1.875rem;
-}
-
-h2 {
-  font-family: "Roboto";
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-p {
-  font-family: "Roboto";
-  font-size: 1.125rem;
-  font-weight: 300;
-}
-
-span {
-  font-family: "Roboto";
 }
 
 button {
@@ -309,27 +269,6 @@ li {
   font-size: 21px;
 }
 
-h1 {
-  font-family: "Shrikhand";
-  font-size: 1.875rem;
-}
-
-h2 {
-  font-family: "Roboto";
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-p {
-  font-family: "Roboto";
-  font-size: 1.125rem;
-  font-weight: 300;
-}
-
-span {
-  font-family: "Roboto";
-}
-
 button {
   width: 218px;
   height: 50px;
@@ -398,25 +337,7 @@ li {
   width: 15px;
   font-size: 14px;
 }
-
-h1 {
-  font-family: "Shrikhand";
-  font-size: 1.875rem;
-}
-
-h2 {
-  font-family: "Roboto";
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-p {
-  font-family: "Roboto";
-  font-size: 1.125rem;
-  font-weight: 300;
-}
-
-span {
+.footer__text {
   font-family: "Roboto";
 }
 
@@ -442,7 +363,7 @@ li {
   background-color: #F6F6F6;
 }
 
-.menu {
+.restaurant {
   background-color: #F6F6F6;
   border-radius: 50px 50px 0 0;
   position: relative;
@@ -451,31 +372,34 @@ li {
   border: transparent 1px solid;
   margin-bottom: -60px;
 }
-.menu__heading {
+.restaurant__heading {
   padding: 32px 17px 40px 17px;
-  width: 341px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
 }
-.menu__title {
+.restaurant__title {
+  font-family: "Shrikhand";
   font-size: 1.75rem;
 }
-.menu__like {
+.restaurant__like {
   font-size: 21px;
+  padding-right: 41px;
 }
 
-.template {
+.menu {
   padding: 0 13px 0 13px;
 }
-.template__title {
+.menu__title {
   width: 76px;
   height: 27px;
   font-size: 1.125rem;
+  font-family: "Roboto";
+  font-weight: 300;
   position: relative;
   display: inline-block;
 }
-.template__title::after {
+.menu__title::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -485,13 +409,13 @@ li {
   background-color: #99E2D0;
   transform: translateX(-95%);
 }
-.template__container {
+.menu__container {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 40px 0;
 }
-.template__items {
+.menu__items {
   width: 100%;
   display: flex;
   border-radius: 20px;
@@ -501,25 +425,28 @@ li {
   align-items: center;
   gap: 15px;
 }
-.template__item {
+.menu__item {
   display: flex;
   flex-direction: column;
   gap: 5px;
   flex: 1;
   padding-left: 15px;
 }
-.template__name {
+.menu__name {
+  font-family: "Roboto";
   font-size: 1.125rem;
 }
-.template__lastname {
+.menu__lastname {
+  font-family: "Roboto";
   font-size: 0.9375rem;
 }
-.template__price {
+.menu__price {
   font-size: 0.9375rem;
+  font-family: "Roboto";
   font-weight: 700;
   padding-top: 27px;
 }
-.template__animation {
+.menu__animation {
   width: 59px;
   height: 69px;
   align-content: center;
@@ -527,12 +454,12 @@ li {
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
 }
-.template__check {
+.menu__check {
   color: #ffffff;
   font-size: 20px;
 }
 
-.containtBtn {
+.menu__btn {
   text-align: center;
   padding-bottom: 40px;
 }

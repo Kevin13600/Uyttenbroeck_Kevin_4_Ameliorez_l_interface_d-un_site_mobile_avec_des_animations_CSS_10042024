@@ -5,7 +5,7 @@
 
 
 
-.menu {
+.restaurant {
     background-color: #F6F6F6;
     border-radius: 50px 50px 0 0;
     position: relative;
@@ -16,29 +16,32 @@
 
     &__heading {
         padding: 32px 17px 40px 17px;
-        width: 341px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 20px;
     }
 
     &__title {
+        font-family: $theme-heading-Shrikhand;
         font-size: $fs-28;
     }
 
     &__like {
-        font-size: 21px;   
+        font-size: 21px;
+        padding-right: 41px;   
     }
 
 }
 
-.template {
+.menu {
     padding: 0 13px 0 13px;
 
     &__title {
         width: 76px;
         height: 27px;
         font-size: $fs-18;
+        font-family: $theme-text-roboto;
+        font-weight: 300;
         position: relative;
         display: inline-block;
         &::after {
@@ -81,15 +84,18 @@
     }
 
     &__name {
+        font-family: $theme-text-roboto;
         font-size: $fs-18;
     }
 
     &__lastname {
+        font-family: $theme-text-roboto;
         font-size: $fs-15;
     }
 
     &__price {
         font-size: $fs-15;
+        font-family: $theme-text-roboto;
         font-weight: 700;
         padding-top: 27px;
     }
@@ -110,7 +116,7 @@
     
 }
 
-.containtBtn {
+.menu__btn {
     text-align: center;
     padding-bottom: 40px;
 }
