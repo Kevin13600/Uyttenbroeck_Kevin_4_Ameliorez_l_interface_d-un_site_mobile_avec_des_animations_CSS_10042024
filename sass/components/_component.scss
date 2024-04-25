@@ -14,6 +14,14 @@ button {
     border: none;
     border-radius: 25px;
     box-shadow: 0 4px 4px 0 rgba( 0,0,0,0.25);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; // Transition pour la couleur de fond et l'ombre
+    &:hover {
+        background: linear-gradient(
+            lighten(#FF79DA, 5%),
+            lighten(#9356DC, 5%)
+        );
+        box-shadow: 0 6px 6px 0 rgba( 0,0,0,0.25);
+    }
 }
 
 li {

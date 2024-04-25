@@ -36,6 +36,11 @@ button {
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 li {
@@ -119,6 +124,11 @@ button {
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 li {
@@ -301,6 +311,11 @@ button {
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 li {
@@ -373,6 +388,11 @@ button {
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 li {
@@ -492,7 +512,7 @@ li {
   font-family: "Roboto";
   font-weight: 700;
   padding-top: 27px;
-  padding-right: 13.5px;
+  padding: 25px 13.5px 0 13.5px;
 }
 .menu__animation {
   width: 0;
