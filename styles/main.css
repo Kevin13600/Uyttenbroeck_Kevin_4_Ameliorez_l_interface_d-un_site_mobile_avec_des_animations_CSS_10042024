@@ -43,13 +43,71 @@ button:hover {
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
-li {
+.tuto__items {
   width: 100%;
   display: flex;
   border-radius: 20px;
   padding: 20px 0 20px 0;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   background-color: #F6F6F6;
+}
+.tuto__items:hover .tuto__icon {
+  transition: color 0.3s ease;
+  color: #ff0000;
+}
+
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+  animation: hideLoader 3s 3s forwards;
+}
+.load__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background: linear-gradient(180deg, #9356DC, #FF79DA, #99E2D0);
+  height: 100%;
+  width: 3vh;
+  animation: bars 2s backwards ease-in-out infinite;
+  animation-direction: alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes hideLoader {
+  100% {
+    display: none;
+  }
 }
 
 .header {
@@ -131,13 +189,71 @@ button:hover {
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
-li {
+.tuto__items {
   width: 100%;
   display: flex;
   border-radius: 20px;
   padding: 20px 0 20px 0;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   background-color: #F6F6F6;
+}
+.tuto__items:hover .tuto__icon {
+  transition: color 0.3s ease;
+  color: #ff0000;
+}
+
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+  animation: hideLoader 3s 3s forwards;
+}
+.load__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background: linear-gradient(180deg, #9356DC, #FF79DA, #99E2D0);
+  height: 100%;
+  width: 3vh;
+  animation: bars 2s backwards ease-in-out infinite;
+  animation-direction: alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes hideLoader {
+  100% {
+    display: none;
+  }
 }
 
 .hero {
@@ -179,13 +295,17 @@ li {
 .tuto {
   padding: 48px 20px 68px 20px;
 }
+@media screen and (min-width: 869px) and (max-width: 1024px) {
+  .tuto {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 1024px) {
   .tuto {
     width: 1053px;
     display: flex;
     flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
   }
 }
 .tuto__title {
@@ -197,6 +317,12 @@ li {
   align-items: start;
   gap: 24.92px;
   padding-left: 12.51px;
+}
+@media screen and (min-width: 869px) and (max-width: 1024px) {
+  .tuto__content {
+    max-width: 317px;
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 1024px) {
   .tuto__content {
@@ -243,15 +369,19 @@ li {
 }
 .restaurants__heading {
   padding-bottom: 48px;
-  font-weight: 500;
   font-family: "Roboto";
+}
+@media screen and (min-width: 869px) and (max-width: 1024px) {
+  .restaurants__heading {
+    text-align: center;
+  }
 }
 .restaurants__cards {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 32px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 869px) {
   .restaurants__cards {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
@@ -297,7 +427,26 @@ li {
   font-family: "Roboto";
 }
 .restaurants__like {
-  font-size: 21px;
+  font-size: 22px;
+}
+.restaurants__like:hover .restaurants__like--1 {
+  transform: scale(0);
+}
+.restaurants__like:hover .restaurants__like--2 {
+  transform: scale(1);
+}
+.restaurants__like--1 {
+  position: relative;
+  left: 13.5px;
+}
+.restaurants__like--2 {
+  position: relative;
+  right: 14px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  transition: transform 0.5s ease;
 }
 
 button {
@@ -318,13 +467,71 @@ button:hover {
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
-li {
+.tuto__items {
   width: 100%;
   display: flex;
   border-radius: 20px;
   padding: 20px 0 20px 0;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   background-color: #F6F6F6;
+}
+.tuto__items:hover .tuto__icon {
+  transition: color 0.3s ease;
+  color: #ff0000;
+}
+
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+  animation: hideLoader 3s 3s forwards;
+}
+.load__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background: linear-gradient(180deg, #9356DC, #FF79DA, #99E2D0);
+  height: 100%;
+  width: 3vh;
+  animation: bars 2s backwards ease-in-out infinite;
+  animation-direction: alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes hideLoader {
+  100% {
+    display: none;
+  }
 }
 
 .footer {
@@ -368,6 +575,7 @@ li {
   width: 190px;
   display: flex;
   gap: 11px;
+  color: #ffffff;
 }
 .footer__content i {
   width: 15px;
@@ -375,6 +583,7 @@ li {
 }
 .footer__text {
   font-family: "Roboto";
+  color: #ffffff;
 }
 
 button {
@@ -395,13 +604,71 @@ button:hover {
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
-li {
+.tuto__items {
   width: 100%;
   display: flex;
   border-radius: 20px;
   padding: 20px 0 20px 0;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   background-color: #F6F6F6;
+}
+.tuto__items:hover .tuto__icon {
+  transition: color 0.3s ease;
+  color: #ff0000;
+}
+
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+  animation: hideLoader 3s 3s forwards;
+}
+.load__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background: linear-gradient(180deg, #9356DC, #FF79DA, #99E2D0);
+  height: 100%;
+  width: 3vh;
+  animation: bars 2s backwards ease-in-out infinite;
+  animation-direction: alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes hideLoader {
+  100% {
+    display: none;
+  }
 }
 
 .restaurant {
@@ -413,9 +680,15 @@ li {
   border: transparent 1px solid;
   margin-bottom: -60px;
 }
+@media screen and (min-width: 869px) and (max-width: 1024px) {
+  .restaurant {
+    padding: 0 100px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1024px) {
   .restaurant {
-    padding: 0 200px;
     max-width: 1055px;
     margin: 0 auto;
   }
@@ -483,6 +756,49 @@ li {
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+  opacity: 0;
+  animation: OpacityMenu 5000ms ease-out forwards;
+}
+.menu__items--1 {
+  animation-delay: 500ms;
+}
+.menu__items--2 {
+  animation-delay: 1000ms;
+}
+.menu__items--3 {
+  animation-delay: 1500ms;
+}
+.menu__items--4 {
+  animation-delay: 2000ms;
+}
+.menu__items--5 {
+  animation-delay: 2500ms;
+}
+.menu__items--6 {
+  animation-delay: 3000ms;
+}
+.menu__items--7 {
+  animation-delay: 3500ms;
+}
+.menu__items--8 {
+  animation-delay: 4000ms;
+}
+.menu__items--9 {
+  animation-delay: 4500ms;
+}
+.menu__items--10 {
+  animation-delay: 5000ms;
+}
+@keyframes OpacityMenu {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu__item {
   display: flex;

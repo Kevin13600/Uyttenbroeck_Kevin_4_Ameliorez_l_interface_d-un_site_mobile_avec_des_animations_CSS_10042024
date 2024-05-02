@@ -13,8 +13,12 @@
     z-index: 1;
     border: transparent 1px solid;
     margin-bottom: -60px;
+    @media screen and (min-width: 869px) and (max-width:1024px) {
+        padding: 0 100px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
     @media screen and (min-width: 1024px) {
-        padding: 0 200px;
         max-width: 1055px;
         margin: 0 auto;
     }
@@ -84,6 +88,27 @@
         align-items: center;
         justify-content: flex-end;
         overflow: hidden;
+        opacity: 0;
+        animation: OpacityMenu 5000ms ease-out forwards;
+        @for $i from 1 through 10 {
+            &--#{$i} {
+                animation-delay: calc(5000ms / 10) * $i
+            }
+        }
+    }
+
+    @keyframes OpacityMenu {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
     
     &__item {

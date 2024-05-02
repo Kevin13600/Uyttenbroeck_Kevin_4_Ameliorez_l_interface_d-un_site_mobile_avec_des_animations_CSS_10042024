@@ -41,6 +41,7 @@
         width: 190px;
         display: flex;
         gap: 11px;
+        color: #ffffff;
         & i {
             width: 15px;
             font-size: 14px;
@@ -49,5 +50,6 @@
 
     &__text {
         font-family: $theme-text-roboto;
+        color: #ffffff;
     }
 }
