@@ -1,91 +1,76 @@
 @import "../themes/theme";
 @import "../utils/mixins";
+@import "../utils/keyframes";
 @import "../components/component";
 
 
 
 
 .restaurant {
-    background-color: #F6F6F6;
-    border-radius: 50px 50px 0 0;
+    @include colors ($white-main, null, transparent 1px solid);
+    @include rounded-corners(50px 50px 0 0);
     position: relative;
     bottom: 60px;
     z-index: 1;
-    border: transparent 1px solid;
     margin-bottom: -60px;
-    @media screen and (min-width: 869px) and (max-width:1024px) {
-        padding: 0 100px;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-    @media screen and (min-width: 1024px) {
+    @include media-query (869px){
+        @media screen and (max-width:1024px) {
+            padding: 0 100px;
+            max-width: 900px;
+            margin: 0 auto;
+            }
+        }  
+
+    @include media-query(1024px) {
+        padding: 0 200px;
         max-width: 1055px;
         margin: 0 auto;
     }
 
     &__heading {
         padding: 32px 17px 40px 17px;
-        display: flex;
-        justify-content: space-between;
-        @media screen and (min-width: 1024px){
-            justify-content: center;
-            align-items: center;
-        }
+        @include flex-center;
+        gap: $sz-22;
     }
 
     &__title {
-        font-family: $theme-heading-Shrikhand;
-        font-size: $fs-28;
+        @include font($sz-28, null, $theme-heading-Shrikhand);
     }
-
-    &__like {
-        font-size: 21px;
-        padding-right: 41px; 
-        @media screen and (min-width: 1024px) {
-            padding-right:0;
-            padding-left: 41px;
-        } 
-    }
-
 }
 
 .menu {
     padding: 0 13px 0 13px;
+    
 
     &__title {
         width: 76px;
         height: 27px;
-        font-size: $fs-18;
-        font-family: $theme-text-roboto;
-        font-weight: 300;
+        @include font($sz-18, 300, $theme-text-roboto);
         position: relative;
         display: inline-block;
         &::after {
-            content: ""; 
-            position: absolute;
-            bottom: 0;
-            left: 50%; 
-            width: 2.5rem; 
-            height: 3px; 
-            background-color: $cyan-Tertiary; 
-            transform: translateX(-95%); 
+            content: ""; // Ajoute un contenu vide
+            position: absolute; // Positionne l'élément de manière absolue par rapport à son parent
+            bottom: 0; // Place l'élément au bas de son parent
+            left: 50%; // Place l'élément à 50% de la largeur de son parent, c'est-à-dire au centre horizontalement
+            width: 2.5rem; // Définit la largeur de l'élément pseudo-élément ::after
+            height: 3px; // Définit la hauteur de l'élément pseudo-élément ::after
+            background-color: $cyan-Tertiary; // Définit la couleur de fond de l'élément pseudo-élément ::after
+            transform: translateX(-95%); // Déplace l'élément de -95% de sa propre largeur vers la gauche, c'est-à-dire presque complètement à gauche 
         }
     }
 
     &__container {
-        display: flex;
-        flex-direction: column;
+        @include flex-container(column, null);
         gap: 12px;
         padding: 40px 0;
     }
 
     &__items {
-        width: 100%;
-        display: flex; 
-        border-radius: 20px;
+        @include rounded-corners(20px);
+        @include flex-center;
         box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-        background-color: #ffffff;
-        align-items: center;
+        background-color: $white-pur;
         justify-content: flex-end;
         overflow: hidden;
         opacity: 0;
@@ -97,23 +82,8 @@
         }
     }
 
-    @keyframes OpacityMenu {
-        0% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 0.5;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-    
     &__item {
-        display: flex;
-        flex-direction: column;
+        @include flex-container(column, null);
         padding-left: 15px;
         gap: 5px;
         flex: 1;
@@ -123,7 +93,7 @@
 
     &__name {
         font-family: $theme-text-roboto;
-        font-size: $fs-18;
+        font-size: $sz-18;
         white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
         overflow: hidden; /* Cache tout contenu débordant */
         text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer le texte tronqué */
@@ -131,7 +101,7 @@
 
     &__lastname {
         font-family: $theme-text-roboto;
-        font-size: $fs-15;
+        font-size: $sz-15;
         white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
         overflow: hidden; /* Cache tout contenu débordant */
         text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer le texte tronqué */
@@ -139,26 +109,23 @@
     }
 
     &__price {
-        font-size: $fs-15;
-        font-family: $theme-text-roboto;
-        font-weight: 700;
-        padding-top: 27px;
+        @include font($sz-15, 700, $theme-text-roboto);
         padding: 25px 13.5px 0 13.5px;
     }
 
     &__animation {
         width: 0;
         height: 69px;
-        align-content: center;
         text-align: center;
-        border-radius: 0 15px 15px 0;
+        @include flex-center;
+        @include rounded-corners (0 15px 15px 0);
         background-color: $cyan-Tertiary;
         overflow: hidden;
         transition: width 0.5s ease;
     }
 
     &__check {
-        color: #ffffff;
+        color: $white-pur;
         font-size: 20px;
     }
     

@@ -1,0 +1,30 @@
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+        
+    }
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+
+@keyframes hideLoader {
+    100% {
+        display: none;   
+    }
+
+}
+
+@keyframes OpacityMenu {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

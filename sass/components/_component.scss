@@ -1,23 +1,17 @@
 @import '../themes/theme';
+@import '../utils/keyframes';
 
 button {
     width: 218px;
     height: 50px;
-    background: linear-gradient(#FF79DA, #9356DC);
-    font-size: $fs-16;
-    color: #ffffff;
-    font-weight: 500;
-    font-family: $theme-text-roboto;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 4px 0 rgba( 0,0,0,0.25);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; // Transition pour la couleur de fond et l'ombre
+    @include colors(linear-gradient(#FF79DA, #9356DC), $white-pur, null);
+    @include font($sz-16, 500, $theme-text-roboto);
+    @include rounded-corners(25px);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease; // Transition pour la couleur de fond et l'ombre
     &:hover {
-        background: linear-gradient(
-            lighten(#FF79DA, 5%),
-            lighten(#9356DC, 5%)
-        );
-        box-shadow: 0 6px 6px 0 rgba( 0,0,0,0.25);
+        background: linear-gradient(lighten(#FF79DA, 5%),lighten(#9356DC, 5%));
+        box-shadow: 0 6px 6px 0 rgba(0,0,0,0.25);
     }
 }
 
@@ -27,10 +21,10 @@ button {
     border-radius: 20px;
     padding: 20px 0 20px 0;
     box-shadow: 0 4px 15px 0 rgba( 0,0,0,0.15);
-    background-color: #F6F6F6;
+    background-color: $white-main;
     &:hover .tuto__icon {
         transition: color 0.3s ease;
-        color: #ff0000;
+        color: $purple-main;
     }
 }
 
@@ -38,15 +32,12 @@ button {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: $white-pur;
     z-index: 1;
     animation: hideLoader 3s 3s forwards;
 
     &__container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
+        @include center; 
         width: calc(3vh * 10); 
         height: calc(3vh * 7.5); 
         display: flex;
@@ -54,7 +45,7 @@ button {
     }
 
     &__bar {
-        background: linear-gradient(180deg, #9356DC, #FF79DA , #99E2D0);
+        background: linear-gradient(180deg, $purple-main, $pink-secondary , $cyan-Tertiary);
         height: 100%;
         width: 3vh;
         animation: bars 2s backwards ease-in-out infinite; 
@@ -65,22 +56,30 @@ button {
             }
         }   
     }
+}
 
-    @keyframes bars {
-        0% {
-            transform: scaleY(0.5);
-            
-        }
-        100% {
-            transform: scaleY(1.0);
-        }
+.restaurants__like {
+    font-size: $sz-22;
+    &:hover .restaurants__like--1 {
+        transform: scale(0);
+    }
+    &:hover .restaurants__like--2 {
+        transform: scale(1);
+    }
+        
+    &--1 {
+        position: relative;
+        left: 13.5px; 
     }
 
-    @keyframes hideLoader {
-        100% {
-            display: none;   
-        }
-
+    &--2 {
+        position: relative;
+        right: 14px;
+        background: linear-gradient(#9356DC,#FF79DA);
+        background-clip: text;
+        color: transparent;
+        transform: scale(0);
+        transition: transform 0.5s ease;     
     }
 }
 

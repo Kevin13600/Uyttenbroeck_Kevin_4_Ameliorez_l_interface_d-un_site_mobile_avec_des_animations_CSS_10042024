@@ -10,8 +10,9 @@ a {
   text-decoration: none;
 }
 
-::placeholder {
-    color: #000000;
+::placeholder,
+  a {
+    color: $pur-black;
   }
 
   li {

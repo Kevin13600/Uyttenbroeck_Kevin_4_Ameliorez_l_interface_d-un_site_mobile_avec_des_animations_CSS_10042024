@@ -3,37 +3,30 @@
 @import "../components/component";
 
 .footer {
-    background-color: #353535;
     padding: 22px 25px;
-    color: #ffffff;
-    @media screen and (min-width: 1024px){
+    @include colors($light-black, $white-pur, none);
+    @include media-query(1024px){
         height: 114px;
-        padding-bottom: 30px;
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 16px;
-        align-items: flex-end;
+        padding-bottom: $sz-30;
+        @include flex-container(row-reverse, flex-end);
+        gap: $sz-16;
     }
-
-
 
     &__logo {
         width: 139px;
-        font-size: $fs-18;
-        font-family: $theme-heading-Shrikhand;
-        padding-bottom: 16px;
+        padding-bottom: $sz-16;
+        @include font($sz-18, null, $theme-heading-Shrikhand);
         @media screen and (min-width: 1024px){
             padding: 0;
         }
     }
 
     &__global {
-        display: flex;
-        flex-direction: column;
+        @include flex-container(column, null);
         gap: 7px;
-        @media screen and (min-width: 1024px){
-        width: 661px;    
-        flex-direction: row;  
+        @include media-query (1024px){
+            width: 661px;    
+            @include flex-container(row, null);  
         }
     }
 
@@ -41,7 +34,7 @@
         width: 190px;
         display: flex;
         gap: 11px;
-        color: #ffffff;
+        color: $white-pur;
         & i {
             width: 15px;
             font-size: 14px;
@@ -49,7 +42,6 @@
     }
 
     &__text {
-        font-family: $theme-text-roboto;
-        color: #ffffff;
+        color: $white-pur;
     }
 }

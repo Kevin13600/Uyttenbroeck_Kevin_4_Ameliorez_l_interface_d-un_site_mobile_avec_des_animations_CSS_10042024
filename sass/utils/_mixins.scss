@@ -1,11 +1,47 @@
+// Mixin pour les layout
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+@mixin flex-container($direction: column, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
 
-  @mixin flex-around($display: flex, $justify-content: space-around) {
-    display: $display;
-    justify-content: $justify-content;
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Mixin pour les media queries
+@mixin media-query($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
   }
+}
+
+// Mixin pour les polices
+@mixin font($size, $weight, $family) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+}
+
+// Mixin pour les couleurs
+@mixin colors($background, $text, $border) {
+  background-color: $background;
+  background: $background;
+  color: $text;
+  border: 0px solid $border;
+}
+
+// Mixin pour les bordures arrondies
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+}
