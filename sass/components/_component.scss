@@ -59,27 +59,29 @@ button {
 }
 
 .restaurants__like {
-    font-size: $sz-22;
+    font-size: $sz-22; 
+    
     &:hover .restaurants__like--1 {
-        transform: scale(0);
+        transform: scale(0); // Applique une transformation de mise à l'échelle à l'élément avec la classe restaurants__like--1 lorsqu'il est survolé.
     }
+
     &:hover .restaurants__like--2 {
-        transform: scale(1);
+        transform: scale(1); // Applique une transformation de mise à l'échelle à l'élément avec la classe restaurants__like--2 lorsqu'il est survolé.
     }
-        
+
     &--1 {
-        position: relative;
+        position: relative; 
         left: 13.5px; 
     }
 
     &--2 {
-        position: relative;
-        right: 14px;
-        background: linear-gradient(#9356DC,#FF79DA);
-        background-clip: text;
-        color: transparent;
-        transform: scale(0);
-        transition: transform 0.5s ease;     
+        position: relative; 
+        right: 14px; 
+        background: linear-gradient(#9356DC,#FF79DA); // Applique un dégradé linéaire comme arrière-plan à l'élément avec la classe restaurants__like--2.
+        background-clip: text; // Indique que le dégradé linéaire doit être appliqué à la couleur du texte.
+        color: transparent; // Rend le texte de l'élément avec la classe restaurants__like--2 transparent.
+        transform: scale(0); // Applique une transformation de mise à l'échelle à l'élément avec la classe restaurants__like--2 pour le rendre invisible.
+        transition: transform 0.5s ease; // Ajoute une transition pour l'effet de mise à l'échelle afin qu'il soit animé en douceur pendant 0.5 seconde avec une accélération régulière.
     }
 }
 

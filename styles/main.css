@@ -370,7 +370,7 @@ button:hover {
 .tuto {
   padding: 48px 20px 68px 20px;
 }
-@media screen and (min-width: 869px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .tuto {
     text-align: center;
   }
@@ -393,7 +393,7 @@ button:hover {
   gap: 24.92px;
   padding-left: 12.51px;
 }
-@media screen and (min-width: 869px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .tuto__content {
     max-width: 500px;
     margin: 0 auto;
@@ -449,7 +449,7 @@ button:hover {
   padding-bottom: 48px;
   font-family: "Roboto";
 }
-@media screen and (min-width: 869px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .restaurants__heading {
     text-align: center;
   }
@@ -459,7 +459,7 @@ button:hover {
   grid-template-columns: 1fr;
   row-gap: 32px;
 }
-@media screen and (min-width: 869px) {
+@media screen and (min-width: 768px) {
   .restaurants__cards {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
@@ -835,7 +835,7 @@ button:hover {
   z-index: 1;
   margin-bottom: -60px;
 }
-@media screen and (min-width: 869px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .restaurant {
     padding: 0 100px;
     max-width: 900px;
